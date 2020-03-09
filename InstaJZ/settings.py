@@ -123,3 +123,7 @@ STATIC_URL = '/static/'
 
 # where to find static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# login/logout redirection ulrs
+LOGIN_REDIRECT_URL  = 'posts'
+LOGOUT_REDIRECT_URL = 'posts'

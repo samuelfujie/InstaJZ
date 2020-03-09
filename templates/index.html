@@ -1,5 +1,25 @@
 {% load static %}
 
+<ul>
+    
+    {% if request.user.is_authenticated %}
+    <li>
+        Hi, {{ request.user.username }}
+    </li>
+    <li>
+        <a href="{% url 'logout' %}">Logout</a>
+    </li>
+    {% else %}
+    <li>
+        <a href="{% url 'login' %}">Login</a>
+    </li>
+    <li>
+        <a href="{% url 'signup' %}">Signup</a>
+    </li>
+    {% endif %}
+        
+</ul>
+
 <div>
     <a href="{% url 'post_create' %}">Make Post</a>
 </div>
