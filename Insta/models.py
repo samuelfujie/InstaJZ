@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from imagekit.models import ProcessedImageField
 
 class Post(models.Model):
@@ -13,3 +14,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        """
+        from django.core.urlresolvers import reverse
+        """
+        return reverse('post_detail', args=[self.id])

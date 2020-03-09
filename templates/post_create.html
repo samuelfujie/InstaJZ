@@ -1,0 +1,10 @@
+<h1>New Post</h1>
+
+<!--encryption type is multipart for both text and media forms-->
+<form action="" method="post" enctype="multipart/form-data">
+    <!--forms need to add csrf_token for security-->
+    {% csrf_token %}
+    <!--render the form as a series paragraphs-->
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
