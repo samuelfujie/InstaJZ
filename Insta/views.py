@@ -3,6 +3,8 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse, reverse_lazy
 from Insta.models import Post
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.contrib.auth.forms import UserCreationForm
 
 # static content
@@ -21,10 +23,11 @@ class PostDetailView(DetailView):
     template_name = 'post_detail.html'
 
 # contain a form
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'post_create.html'
     fields = '__all__'
+    login_url = 'login'
 
 # contain a form
 class PostUpdateView(UpdateView):
