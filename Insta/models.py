@@ -30,4 +30,3 @@ class InstaUser(AbstractUser):
         blank=True,
         null=True,
     )
-    

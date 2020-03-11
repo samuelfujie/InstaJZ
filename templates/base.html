@@ -1,0 +1,25 @@
+<html>
+    <!-- have to load static first  -->
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <!-- if you veiw this on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- page name on the tab -->
+        <title>Mini Instagram</title>
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/font-awesome-4.6.3/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'header.html' %}
+        
+
+        {% block content %}
+        {% endblock content%}
+
+
+
+
+    </body>
+</html>

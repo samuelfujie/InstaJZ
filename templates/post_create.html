@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <h1>New Post</h1>
 
 <!--encryption type is multipart for both text and media forms-->
@@ -8,3 +12,5 @@
     {{ form.as_p }}
     <button type="submit">Save</button>
 </form>
+
+{% endblock content %}
