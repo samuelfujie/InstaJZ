@@ -132,3 +132,6 @@ LOGOUT_REDIRECT_URL = 'posts'
 
 # choose user model to use
 AUTH_USER_MODEL = 'Insta.InstaUser'
+
+# whitenoise setting
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
