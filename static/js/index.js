@@ -14,7 +14,7 @@ function create_like(success_cb, error_cb) {
 
     $.ajax({
         type: "POST",
-        url: '/insta/like',
+        url: '/like',
         data: {
             post_pk: post_pk
         },
