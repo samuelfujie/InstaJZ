@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Insta.models import Post, InstaUser, Like, Comment
+from Insta.models import Post, InstaUser, Like, Comment, UserConnection
 
 class CommentInLine(admin.StackedInline):
     model = Comment
@@ -18,3 +18,4 @@ admin.site.register(Post, PostAdmin)
 admin.site.register(InstaUser)
 admin.site.register(Like)
 admin.site.register(Comment)
+admin.site.register(UserConnection)
